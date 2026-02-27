@@ -2,11 +2,14 @@
 <html>
 <head>
 <title>TCS Restaurant - Giridih</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<meta name="description" content="TCS Restaurant in Giridih Jharkhand. Order on Zomato and Swiggy.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TCS Restaurant in Giridih Jharkhand. Order delicious food online. Available on Zomato and Swiggy.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+
 body{
 font-family: 'Poppins', sans-serif;
 margin:0;
@@ -14,10 +17,11 @@ background: linear-gradient(135deg, #fff5ee, #ffe4e1);
 scroll-behavior:smooth;
 }
 
+/* HEADER */
 header{
 background: linear-gradient(45deg,#8b0000,#ff4500);
 color:white;
-padding:60px 20px;
+padding:70px 20px;
 text-align:center;
 animation: fadeIn 2s ease-in-out;
 }
@@ -28,43 +32,118 @@ margin:0;
 letter-spacing:2px;
 }
 
+header p{
+font-size:18px;
+margin-top:10px;
+}
+
+/* NAVIGATION */
 nav{
 background:black;
 padding:15px;
 text-align:center;
+position:sticky;
+top:0;
 }
 
 nav a{
 color:white;
-margin:15px;
+margin:20px;
 text-decoration:none;
+font-weight:500;
+transition:0.3s;
 }
 
+nav a:hover{
+color:#ff4500;
+}
+
+/* MENU SECTION */
 section{
-padding:40px;
-text-align:center;
+padding:50px 20px;
 }
 
-.card{
+h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.menu-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+}
+
+.menu-category{
+width:300px;
 background:white;
 padding:20px;
-margin:15px;
-display:inline-block;
-width:250px;
-box-shadow:0 4px 8px gray;
-border-radius:10px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-footer{
-background:#b22222;
-color:white;
-padding:15px;
-text-align:center;
+.menu-category:hover{
+transform: translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
-  @keyframes fadeIn{
+
+.menu-category h3{
+border-bottom:2px solid #b22222;
+padding-bottom:10px;
+}
+
+.menu-category p{
+display:flex;
+justify-content:space-between;
+margin:8px 0;
+font-size:15px;
+}
+
+/* BUTTON */
+.order-btn{
+background:#ff4500;
+color:white;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.order-btn:hover{
+background:#8b0000;
+transform:scale(1.1);
+}
+
+/* CONTACT */
+.contact-box{
+text-align:center;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+max-width:500px;
+margin:0 auto;
+}
+
+/* FOOTER */
+footer{
+background:#8b0000;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
 from{opacity:0; transform:translateY(-20px);}
 to{opacity:1; transform:translateY(0);}
 }
+
 </style>
 </head>
 
@@ -72,11 +151,17 @@ to{opacity:1; transform:translateY(0);}
 
 <header>
 <h1>TCS Restaurant</h1>
-<p>Giridih, Jharkhand</p>
+<p>Delicious Taste of Giridih, Jharkhand</p>
 </header>
 
+<nav>
+<a href="#">Home</a>
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <section id="menu">
-<h2 style="text-align:center;">Our Full Menu</h2>
+<h2>Our Full Menu</h2>
 
 <div class="menu-container">
 
@@ -89,7 +174,7 @@ to{opacity:1; transform:translateY(0);}
 </div>
 
 <div class="menu-category">
-<h3>🍛 Main Course (Veg)</h3>
+<h3>🍛 Veg Main Course</h3>
 <p><span>Paneer Butter Masala</span> <span>₹170</span></p>
 <p><span>Shahi Paneer</span> <span>₹180</span></p>
 <p><span>Kadai Paneer</span> <span>₹160</span></p>
@@ -97,7 +182,7 @@ to{opacity:1; transform:translateY(0);}
 </div>
 
 <div class="menu-category">
-<h3>🍖 Main Course (Non-Veg)</h3>
+<h3>🍖 Non-Veg Main Course</h3>
 <p><span>Chicken Curry</span> <span>₹190</span></p>
 <p><span>Butter Chicken</span> <span>₹220</span></p>
 <p><span>Mutton Curry</span> <span>₹260</span></p>
@@ -112,38 +197,25 @@ to{opacity:1; transform:translateY(0);}
 </div>
 
 </div>
-</section>
 
-</section>
-<div class="card">
-<h3>Chicken Biryani</h3>
-<p>Delicious and spicy special biryani.</p>
-</div>
-
-<div class="card">
-<h3>Burgers </h3>
-<p> Different Varietis of delicious burgers</p>
-</div>
-
-<div class="card">
-<h3>Hakka Noodles</h3>
-<p>Tasty Chinese style noodles.</p>
+<div style="text-align:center; margin-top:40px;">
+<button class="order-btn">Order on Zomato & Swiggy</button>
 </div>
 
 </section>
 
-<section>
-<h2>Order Online</h2>
-<p>Available on Zomato and Swiggy</p>
-</section>
-
-<section>
+<section id="contact">
 <h2>Contact Us</h2>
-<p>📍 Location: TCS Restaurant, Giridih, Jharkhand</p>
-<p>📞 Phone: +91 9334260785</p>
-<p>📧 Email: tcsrestaurant@gmail.com</p>
-<p>🕒 Open: 12 AM – 10 PM</p>
+
+<div class="contact-box">
+<p>📍 TCS Restaurant, Giridih, Jharkhand</p>
+<p>📞 +91 9876543210</p>
+<p>🕒 Open: 10 AM – 10 PM</p>
+<p>🚚 Available on Zomato & Swiggy</p>
+</div>
+
 </section>
+
 <footer>
 © 2026 TCS Restaurant | All Rights Reserved
 </footer>
